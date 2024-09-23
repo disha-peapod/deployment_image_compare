@@ -81,11 +81,12 @@ for row in range(2, len(df) + 1):  # Skip header row
     elif compare_value == 'Dev < QA':
         worksheet[f'B{row}'].fill = red_fill  # Color filename red
 
-# Save as CSV
-csv_filename = 'dev_qa_timage_tags_csv.csv'
-
+# Save CSV
+csv_filename = 'dev_qa_image_tags_csv.csv'
 df.to_csv(csv_filename, index=False)
 
+# Save DataFrame to Excel
+df.to_excel(output_filename, index=False)
 
 print("Make sure you have the latest changes from the main branch for - pdl-coreservices-app-deployments")
 print(f"Comparison table saved as {output_filename}.")
