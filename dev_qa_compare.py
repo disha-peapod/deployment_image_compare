@@ -63,6 +63,9 @@ df['compare'] = df.apply(
 os.chdir('deployment_image_compare')
 
 output_filename = 'dev_qa_image_tags_compare.xlsx'
+# Save DataFrame to Excel
+df.to_excel(output_filename, index=False)
+
 workbook = load_workbook(output_filename)
 worksheet = workbook.active
 
@@ -71,22 +74,27 @@ green_fill = PatternFill(start_color="00FF00", end_color="00FF00", fill_type="so
 yellow_fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")  # Yellow
 red_fill = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="solid")    # Red
 
-for row in range(2, len(df) + 1):  # Skip header row
-    compare_value = worksheet[f'E{row}'].value  # Assuming 'compare' column is column E
+# Apply conditional formatting based on the comparison of Dev and QA image tags
+for row in range(2, len(df) + 2):  # Skip header row
+    dev_tag = worksheet[f'C{row}'].value  # Dev tag assumed in column C
+    qa_tag = worksheet[f'D{row}'].value   # QA tag assumed in column D
+
     # Conditional formatting logic
-    if compare_value == 'Match':
+    if dev_tag == qa_tag:
+        worksheet[f'E{row}'].fill = green_fill  # Optional: add text in the compare column
         worksheet[f'B{row}'].fill = green_fill  # Color filename green
-    elif compare_value == 'Dev > QA':
+    elif dev_tag > qa_tag:
+        worksheet[f'E{row}'].fill = yellow_fill  # Optional: add text in the compare column
         worksheet[f'B{row}'].fill = yellow_fill  # Color filename yellow
-    elif compare_value == 'Dev < QA':
+    else:
+        worksheet[f'E{row}'].fill = red_fill  # Optional: add text in the compare column
         worksheet[f'B{row}'].fill = red_fill  # Color filename red
+
+workbook.save(output_filename)
 
 # Save CSV
 csv_filename = 'dev_qa_image_tags_csv.csv'
 df.to_csv(csv_filename, index=False)
-
-# Save DataFrame to Excel
-df.to_excel(output_filename, index=False)
 
 print("Make sure you have the latest changes from the main branch for - pdl-coreservices-app-deployments")
 print(f"Comparison table saved as {output_filename}.")
