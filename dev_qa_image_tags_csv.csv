@@ -1,75 +1,75 @@
 Service Name,Filename,Dev Image Tag,QA Image Tag,compare
-cart-checkout,cart-calculation-api.yaml,release-2023-12-294-gd549d9965,release-2023-12-294-gd549d9965,Match
-cart-checkout,order-workflow-service.yaml,0.1.33-2-ge477d6c,0.1.33-2-ge477d6c,Match
-cart-checkout,order-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-89-ga38a381,Dev < QA
 cart-checkout,cart-checkout-utility.yaml,0.0.2-3-g4f1692f,0.0.3-rc,Dev < QA
-cart-checkout,orderprogress-api.yaml,v2.2.9-126-g6fc91ee,v2.2.9-92-g3903c77,Dev < QA
-cart-checkout,cart-rewards-api.yaml,v1.0.42-79-g611d69c,v1.0.42-79-g611d69c,Match
-cart-checkout,orderstatus-worker.yaml,v2.1.15-43-gd89a742,v2.1.15-43-gd89a742,Match
-cart-checkout,slots-indexer.yaml,0.1.7-1-g87ca86b,0.1.7-1-g87ca86b,Match
+cart-checkout,orderprogress-api.yaml,v2.2.9-126-g6fc91ee,v2.2.9-92-g3903c77,Dev > QA
+cart-checkout,order-workflow-service.yaml,0.1.33-2-ge477d6c,0.1.33-2-ge477d6c,Match
 cart-checkout,slots-api.yaml,v1.2.40-125-g8d4d9eb,v1.2.40-125-g8d4d9eb,Match
-cart-checkout,order-streaming.yaml,1.3.4-2-g71a8e11,1.3.4-2-g71a8e11,Match
+cart-checkout,order-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-89-ga38a381,Dev < QA
+cart-checkout,cart-calculation-api.yaml,release-2023-12-294-gd549d9965,release-2023-12-294-gd549d9965,Match
+cart-checkout,slots-indexer.yaml,0.1.7-1-g87ca86b,0.1.7-1-g87ca86b,Match
 cart-checkout,orderprogress-invoice-sender.yaml,v2.1.17-86-g3d8529e,v2.1.17-86-g3d8529e,Match
-data-integration,app-config-api.yaml,1.1.26-28-g9782bc1,1.1.26-7-g93d69d0,Dev < QA
+cart-checkout,orderstatus-worker.yaml,v2.1.15-43-gd89a742,v2.1.15-43-gd89a742,Match
+cart-checkout,cart-rewards-api.yaml,v1.0.42-79-g611d69c,v1.0.42-79-g611d69c,Match
+cart-checkout,order-streaming.yaml,1.3.4-2-g71a8e11,1.3.4-2-g71a8e11,Match
 data-integration,product-category-api.yaml,1.0.0-rc,1.0.0-rc,Match
-data-integration,product-admin.yaml,v1.0.25-77-gbed1e18,v1.0.25-77-gbed1e18,Match
-data-integration,coupon-check-ui.yaml,1.2.29-34-g2f23ee6e,v1.1.5-42-gcedb5dec,Dev < QA
-data-integration,past-purchase.yaml,3.0.1-rc,3.0.1-rc,Match
-data-integration,store-api.yaml,1.0.1-4-gd7809f2,1.0.0-3-g4fd527a,Dev > QA
-data-integration,store-locator.yaml,2.0.0-9-gd736484,2.0.0-1-gc5a25f1,Dev > QA
-data-integration,product-info-api.yaml,0.1.0-2-g388dc64,0.1.0-2-g388dc64,Match
 data-integration,job-api.yaml,v1.0.6.bkp.before.2023.3.0-53-g39d1085,v1.0.6.bkp.before.2023.3.0-36-ge0093f3,Dev > QA
-customer-customer,legacy-data-api.yaml,1.0.14-8-g806fa30,1.0.14-8-g806fa30,Match
-customer-customer,external-domain-api.yaml,v0.0.4-82-g8b3fc9c,v0.0.4-82-g8b3fc9c,Match
-customer-customer,external-domain-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
-customer-customer,profile-api.yaml,v1.5.2-847-g2f78dcda,v1.5.2-959-g410e7e5d,Dev < QA
-customer-customer,id-generator-service.yaml,1.x.x-1-g5850171,1.x.x-1-g5850171,Match
-customer-customer,notification-api.yaml,1.x.x-4-g76a6a15,1.x.x-7-g67ffb0b,Dev < QA
-customer-customer,profile-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
-customer-customer,template-engine-handler.yaml,v1.0.6-53-g08fbc4c,v1.0.6-53-g08fbc4c,Match
-customer-customer,jwt-authorization-server.yaml,v1.0.1-75-g8bea82f,v1.0.1-75-g8bea82f,Match
+data-integration,coupon-check-ui.yaml,1.2.29-34-g2f23ee6e,v1.1.5-42-gcedb5dec,Dev > QA
+data-integration,store-api.yaml,1.0.1-4-gd7809f2,1.0.0-3-g4fd527a,Dev > QA
+data-integration,product-info-api.yaml,0.1.0-2-g388dc64,0.1.0-2-g388dc64,Match
+data-integration,product-admin.yaml,v1.0.25-77-gbed1e18,v1.0.25-77-gbed1e18,Match
+data-integration,store-locator.yaml,2.0.0-9-gd736484,2.0.0-1-gc5a25f1,Dev > QA
+data-integration,app-config-api.yaml,1.1.26-28-g9782bc1,1.1.26-7-g93d69d0,Dev > QA
+data-integration,past-purchase.yaml,3.0.1-rc,3.0.1-rc,Match
 customer-customer,device-notification-api.yaml,v1.1.4-64-ged97bdf,v1.1.4-64-ged97bdf,Match
-customer-customer,device-sms-api.yaml,v1.2.9-53-gd1922c7,v1.2.9-53-gd1922c7,Match
-customer-customer,session-management-api.yaml,v1.10.5-273-g0967ee7,v1.10.5-329-ge99d28d,Dev < QA
-customer-customer,template-engine-handler-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
+customer-customer,jwt-authorization-server.yaml,v1.0.1-75-g8bea82f,v1.0.1-75-g8bea82f,Match
 customer-customer,device-data-api.yaml,1.x.x-6-gf64a124,1.x.x-6-gf64a124,Match
+customer-customer,template-engine-handler.yaml,v1.0.6-53-g08fbc4c,v1.0.6-53-g08fbc4c,Match
+customer-customer,profile-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
 customer-customer,subscription-manager-api.yaml,v0.0.16-178-gf44f19c,v0.0.16-178-gf44f19c,Match
-payment-payment,payment-service-api.yaml,v0.4.12-98-g9da8729,v0.4.12-98-g9da8729,Match
+customer-customer,template-engine-handler-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
+customer-customer,external-domain-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
+customer-customer,session-management-api.yaml,v1.10.5-273-g0967ee7,v1.10.5-329-ge99d28d,Dev < QA
+customer-customer,external-domain-api.yaml,v0.0.4-82-g8b3fc9c,v0.0.4-82-g8b3fc9c,Match
+customer-customer,id-generator-service.yaml,1.x.x-1-g5850171,1.x.x-1-g5850171,Match
+customer-customer,device-sms-api.yaml,v1.2.9-53-gd1922c7,v1.2.9-53-gd1922c7,Match
+customer-customer,profile-api.yaml,v1.5.2-847-g2f78dcda,v1.5.2-959-g410e7e5d,Dev < QA
+customer-customer,notification-api.yaml,1.x.x-4-g76a6a15,1.x.x-7-g67ffb0b,Dev < QA
+customer-customer,legacy-data-api.yaml,1.0.14-8-g806fa30,1.0.14-8-g806fa30,Match
 payment-payment,wallet-session-service.yaml,2.2.0-3-ge01efe4,2.0.0-8-g4f0862a,Dev > QA
+payment-payment,payment-service-api.yaml,v0.4.12-98-g9da8729,v0.4.12-98-g9da8729,Match
 oms-order-management,fulfillment-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
-customer-loyalty,passbook.yaml,2.0.1-rc-10-g0723aed,2.0.1-rc-2-gc516163,Dev < QA
-customer-loyalty,contact-us.yaml,2.0.0-34-g704a143,2.0.0-24-g10c925a,Dev > QA
-customer-loyalty,product-recalls.yaml,2.0.4-rc,2.0.4-rc,Match
-customer-loyalty,rewards-history.yaml,1.0.13-13-g7140e4b,1.0.13-13-g7140e4b,Match
-customer-loyalty,rewards.yaml,v1.7.9-139-gb7eee7ed,v1.7.9-139-gb7eee7ed,Match
 customer-loyalty,site-transition.yaml,1.x.x-39-g43ead5e,1.x.x-11-g1cbaa8d,Dev > QA
+customer-loyalty,passbook.yaml,2.0.1-rc-10-g0723aed,2.0.1-rc-2-gc516163,Dev > QA
+customer-loyalty,rewards-history.yaml,1.0.13-13-g7140e4b,1.0.13-13-g7140e4b,Match
+customer-loyalty,product-recalls.yaml,2.0.4-rc,2.0.4-rc,Match
+customer-loyalty,contact-us.yaml,2.0.0-34-g704a143,2.0.0-24-g10c925a,Dev > QA
+customer-loyalty,balances.yaml,1.5.0-104-ga7d84ad,1.5.0-104-ga7d84ad,Match
+customer-loyalty,rewards.yaml,v1.7.9-139-gb7eee7ed,v1.7.9-139-gb7eee7ed,Match
 customer-loyalty,loyalty-account.yaml,1.x.x-7-g2875210,1.x.x-7-g2875210,Match
 customer-loyalty,rewards-history-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
-customer-loyalty,balances.yaml,1.5.0-104-ga7d84ad,1.5.0-104-ga7d84ad,Match
 web-frontend,peapod-email-service.yaml,0.1.80-29-g8342797,0.1.80-29-g8342797,Match
 web-frontend,mail-relay-decorator.yaml,v2.0.16-101-g9965fd7,v2.0.16-116-g66a4ef4,Dev < QA
 web-frontend,entrypoint.yaml,Not Found,Not Found,Match
-search-and-browse,store-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
-search-and-browse,pdl-router.yaml,v1.0.67-121-g4332a98,v1.0.67-119-gf05bc01,Dev > QA
-search-and-browse,targeting-publisher.yaml,1.3.8-2-gbd9af93,1.3.8-2-gbd9af93,Match
+search-and-browse,weekly-ad-api.yaml,1.0.0-3-gcf2ae26,0.0.1-162-g6a1adc5,Dev > QA
 search-and-browse,coupon-api.yaml,v1.9.25-173-g822f672,v1.9.25-173-g822f672,Match
-search-and-browse,peapod-client-template-engine.yaml,v5.1.0-8975-g7edee2e535,v5.1.0-8646-g275998622d,Dev > QA
+search-and-browse,peapod-client-template-engine-static.yaml,v5.1.0-8975-g7edee2e535,v5.1.0-8646-g275998622d,Dev > QA
+search-and-browse,coupons.yaml,v1.4.12-166-g82f28a9,v1.4.12-166-g82f28a9,Match
+search-and-browse,seo-pages.yaml,0.1.3-39-g5b9052f,0.1.3-12-g15f3c9e,Dev > QA
+search-and-browse,site-config-loader.yaml,v5.1.0-1139-gfe02df4,v5.1.0-1139-gfe02df4,Match
 search-and-browse,product-api.yaml,v1.1.13-785-g3726438b,v1.1.13-778-g849f9334,Dev > QA
+search-and-browse,elasticsearch-query-router.yaml,v1.2.2-76-g4d74dda,v1.2.2-64-g1c76b14,Dev > QA
+search-and-browse,targeting-compilation-api.yaml,1.4.4-49-g20be4e8,1.4.4-2-gc2ce593,Dev > QA
 search-and-browse,site-config-api.yaml,v3.2.1-21-g1a2e870,v3.2.1-21-g1a2e870,Match
+search-and-browse,content-publisher.yaml,1.x.x-138-g83867db,1.x.x-18-gb1c071c,Dev > QA
 search-and-browse,targeting-api.yaml,v1.0.20-434-gccfe67b,v1.0.20-434-gccfe67b,Match
 search-and-browse,user-coupon-service.yaml,v1.0.44-517-ge64e716e,v1.0.44-517-ge64e716e,Match
-search-and-browse,coupons.yaml,v1.4.12-166-g82f28a9,v1.4.12-166-g82f28a9,Match
-search-and-browse,peapod-client-template-engine-static.yaml,v5.1.0-8975-g7edee2e535,v5.1.0-8646-g275998622d,Dev > QA
-search-and-browse,weekly-ad-api.yaml,1.0.0-3-gcf2ae26,0.0.1-162-g6a1adc5,Dev > QA
-search-and-browse,user-coupon-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
 search-and-browse,shoppinglist-api.yaml,v1.2.3-231-gfd57fb7,v1.2.3-231-gfd57fb7,Match
+search-and-browse,targeting-publisher.yaml,1.3.8-2-gbd9af93,1.3.8-2-gbd9af93,Match
+search-and-browse,coupon-retrieval-api.yaml,0.2.0-19-g26d2976,0.2.0-2-g2048b87,Dev > QA
+search-and-browse,peapod-client-template-engine.yaml,v5.1.0-8975-g7edee2e535,v5.1.0-8646-g275998622d,Dev > QA
 search-and-browse,personalization-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
-search-and-browse,content-publisher.yaml,1.x.x-138-g83867db,1.x.x-18-gb1c071c,Dev < QA
-search-and-browse,targeting-compilation-api.yaml,1.4.4-49-g20be4e8,1.4.4-2-gc2ce593,Dev > QA
-search-and-browse,coupon-retrieval-api.yaml,0.2.0-19-g26d2976,0.2.0-2-g2048b87,Dev < QA
-search-and-browse,coupon-compilation-api.yaml,0.1.2-12-g6d197e0,0.1.2-6-g9365747,Dev < QA
-search-and-browse,content-service.yaml,v1.0.5-146-g9cbc171,v1.0.5-123-g7241ee8,Dev > QA
-search-and-browse,site-config-loader.yaml,v5.1.0-1139-gfe02df4,v5.1.0-1139-gfe02df4,Match
-search-and-browse,elasticsearch-query-router.yaml,v1.2.2-76-g4d74dda,v1.2.2-64-g1c76b14,Dev > QA
+search-and-browse,coupon-compilation-api.yaml,0.1.2-12-g6d197e0,0.1.2-6-g9365747,Dev > QA
 search-and-browse,product-api-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
-search-and-browse,seo-pages.yaml,0.1.3-39-g5b9052f,0.1.3-12-g15f3c9e,Dev > QA
+search-and-browse,pdl-router.yaml,v1.0.67-121-g4332a98,v1.0.67-119-gf05bc01,Dev > QA
+search-and-browse,content-service.yaml,v1.0.5-146-g9cbc171,v1.0.5-123-g7241ee8,Dev > QA
+search-and-browse,user-coupon-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match
+search-and-browse,store-router.yaml,v1.0.2-69-ge754cb3,v1.0.2-69-ge754cb3,Match

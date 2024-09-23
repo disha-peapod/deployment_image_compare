@@ -4,6 +4,7 @@ import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
 import pdfkit
+import re
 
 # Define the base paths for dev and qa environments
 base_path_dev = "pdl-coreservices-app-deployments/app-values-02/nonprd"
@@ -53,12 +54,23 @@ for service_name in service_names:
 
 # Create a DataFrame
 df = pd.DataFrame(table_data)
-df['compare'] = df.apply(
-    lambda row: 'Match' if row['Dev Image Tag'] == row['QA Image Tag'] else 
-                'Dev > QA' if row['Dev Image Tag'] > row['QA Image Tag'] else 
-                'Dev < QA', axis=1
-)
 
+# Adjusted function to accurately parse and compare version strings with detailed logic
+def compare_versions(dev_tag, qa_tag):
+    # Extract numerical segments including build numbers and hash parts for comparison
+    dev_parts = list(map(int, re.findall(r'\d+', dev_tag)))
+    qa_parts = list(map(int, re.findall(r'\d+', qa_tag)))
+    
+    # Compare the extracted version segments properly
+    if dev_parts == qa_parts:
+        return 'Match'
+    elif dev_parts > qa_parts:
+        return 'Dev > QA'
+    else:
+        return 'Dev < QA'
+
+# Apply the corrected comparison function to the updated DataFrame
+df['compare'] = df.apply(lambda row: compare_versions(row['Dev Image Tag'], row['QA Image Tag']), axis=1)
 
 os.chdir('deployment_image_compare')
 
@@ -76,14 +88,13 @@ red_fill = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="soli
 
 # Apply conditional formatting based on the comparison of Dev and QA image tags
 for row in range(2, len(df) + 2):  # Skip header row
-    dev_tag = worksheet[f'C{row}'].value  # Dev tag assumed in column C
-    qa_tag = worksheet[f'D{row}'].value   # QA tag assumed in column D
+    compare = worksheet[f'E{row}'].value 
 
     # Conditional formatting logic
-    if dev_tag == qa_tag:
+    if compare == 'Match':
         worksheet[f'E{row}'].fill = green_fill  # Optional: add text in the compare column
         worksheet[f'B{row}'].fill = green_fill  # Color filename green
-    elif dev_tag > qa_tag:
+    elif compare == 'Dev > QA':
         worksheet[f'E{row}'].fill = yellow_fill  # Optional: add text in the compare column
         worksheet[f'B{row}'].fill = yellow_fill  # Color filename yellow
     else:
